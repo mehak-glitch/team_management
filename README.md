@@ -1,4 +1,4 @@
-Project Title: **Project Management Website**
+**Project Management Website**
 Role: Team Lead (Research & Development)
 Tools & Technologies: React.js, Node.js, Express, MongoDB, Git, HTML/CSS, JavaScript
 Description:
