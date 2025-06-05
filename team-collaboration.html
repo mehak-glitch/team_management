@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Collaboration</title>
+    <link rel="stylesheet" href="team-collaboration.css"> <!-- Link to the provided CSS -->
+</head>
+<body>
+
+    <!-- Container for the website -->
+    <div class="container">
+
+        <!-- Header -->
+        <h1>Team Collaboration</h1>
+
+        <!-- Navigation menu -->
+        <div class="nav-menu">
+            <button onclick="showTeamMembers()">View Team Members</button>
+            <button onclick="showTeamRoles()">View Team Roles</button>
+            <button onclick="showTeamTasks()">View Team Tasks</button>
+            <button onclick="showCommunicate()">Communicate</button>
+        </div>
+
+        <!-- View Team Members Section -->
+        <div id="team-members" class="section" style="display:none;">
+            <h2>Team Members</h2>
+            <ul>
+                <li>John Doe - Developer</li>
+                <li>Jane Smith - Designer</li>
+                <li>Michael Johnson - Project Manager</li>
+                <!-- Add more team members here -->
+            </ul>
+        </div>
+
+        <!-- View Team Roles Section -->
+        <div id="team-roles" class="section" style="display:none;">
+            <h2>Team Roles</h2>
+            <ul>
+                <li>John Doe - Full Stack Developer</li>
+                <li>Jane Smith - UI/UX Designer</li>
+                <li>Michael Johnson - Lead Project Manager</li>
+                <!-- Add more team roles here -->
+            </ul>
+        </div>
+
+        <!-- View Team Tasks Section -->
+        <div id="team-tasks" class="section" style="display:none;">
+            <h2>Team Tasks</h2>
+            <ul>
+                <li>Task 1: Frontend Development</li>
+                <li>Task 2: UI/UX Design</li>
+                <li>Task 3: Project Management and Planning</li>
+                <!-- Add more tasks here -->
+            </ul>
+        </div>
+
+        <!-- Communicate Section -->
+        <div id="communicate" class="section" style="display:none;">
+            <h2>Communicate</h2>
+            <form action="#" method="POST">
+                <textarea name="message" placeholder="Enter your message..." rows="5" required></textarea>
+                <br>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="message-status"></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Team Collaboration System</p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript to toggle between sections -->
+    <script>
+        function showTeamMembers() {
+            document.getElementById("team-members").style.display = "block";
+            document.getElementById("team-roles").style.display = "none";
+            document.getElementById("team-tasks").style.display = "none";
+            document.getElementById("communicate").style.display = "none";
+        }
+
+        function showTeamRoles() {
+            document.getElementById("team-members").style.display = "none";
+            document.getElementById("team-roles").style.display = "block";
+            document.getElementById("team-tasks").style.display = "none";
+            document.getElementById("communicate").style.display = "none";
+        }
+
+        function showTeamTasks() {
+            document.getElementById("team-members").style.display = "none";
+            document.getElementById("team-roles").style.display = "none";
+            document.getElementById("team-tasks").style.display = "block";
+            document.getElementById("communicate").style.display = "none";
+        }
+
+        function showCommunicate() {
+            document.getElementById("team-members").style.display = "none";
+            document.getElementById("team-roles").style.display = "none";
+            document.getElementById("team-tasks").style.display = "none";
+            document.getElementById("communicate").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
