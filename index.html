@@ -1,59 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project Management System</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Project Management System</h1>
-    <button onclick="handleLogin()">Login</button>
-  </header>
+    <header>
+        <h1>Project Management System</h1>
+    </header>
+    <main>
+        <section id="verification-system">
+            <h2>1. Verification System</h2>
+            <ul>
+                <li><strong>Login:</strong> Authenticate users with credentials.</li>
+                <li><strong>Verify Credentials:</strong> Match user credentials with database.</li>
+            </ul>
+            <a href="verification.html" class="nav-link">
+                <button>Verify Your Credentials</button>
+            </a>
+        </section>
+        <section id="user-management">
+            <h2>2. User Management</h2>
+            <ul>
+                <li><strong>Display Main Menu:</strong> Show options based on user roles.</li>
+                <li><strong>Admin Menu:</strong> Manage users and view reports.</li>
+            </ul>
+            <a href="user-management.html" class="nav-link">
+                <button>Go to User Management</button>
+            </a>
+        </section>
+        <section id="task-management">
+            <h2>3. Task Management</h2>
+            <ul>
+                <li>Create, update, and track tasks.</li>
+                <li>Set deadlines, assign priorities, and allocate team members.</li>
+            </ul>
+            <a href="task-management.html" class="nav-link">
+                <button>Go to Task Management</button>
+            </a>
+        </section>
 
-  <main>
-    <section>
-      <h2>1. Verification System</h2>
-      <p>Login: Authenticate users with credentials.</p>
-      <a href="verification.html"><button>Verify Your Credentials</button></a>
-    </section>
+        <section id="team-collaboration">
+            <h2>4. Team Collaboration</h2>
+            <ul>
+                <li>View team members, roles, and tasks.</li>
+                <li>Facilitate team communication via messaging system </li>
+            </ul>
+            <a href="team-collboration.html" class="nav-link">
+                <button>Go to Team Collaboration</button>
+            </a>
+        </section>
+        <section id="reporting">
+            <h2>5. Reporting</h2>
+            <ul>
+                <li>Generate and repost reports based on permissions.</li>
+            </ul>
+            <a href="reporting.html" class="nav-link">
+                <button>Go to Reporting</button>
+            </a>
+        </section>
+        <section id="utility-functions">
+            <h2>6. Utility Functions</h2>
+            <ul>
+                <li>Helper functions for selecting tasks, setting priorities, and managing deadlines.</li>
+            </ul>
+            <a href="Utility.html" class="nav-link">
+                <button>Go to Utilities</button>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Management System. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 
-    <section>
-      <h2>2. User Management</h2>
-      <p>Manage users and view reports based on roles.</p>
-      <a href="user-management.html"><button>Go to User Management</button></a>
-    </section>
+    <!-- Container for the website -->
+    <div class="container">
 
-    <section>
-      <h2>3. Task Management</h2>
-      <p>Create, assign, and track team tasks.</p>
-      <a href="task-management.html"><button>Go to Task Management</button></a>
-    </section>
+    <!-- JavaScript to manage forms and user actions -->
+    <script>
+        // Simulate report viewing based on user access
+        function viewReport(event) {
+            event.preventDefault(); // Prevent form submission
 
-    <section>
-      <h2>4. Team Collaboration</h2>
-      <p>Collaborate with your team easily.</p>
-      <a href="team-collaboration.html"><button>Go to Team Collaboration</button></a>
-    </section>
+            var report = document.getElementById("report").value;
+            var reportOutput = document.getElementById("report-output");
+            var reportStatus = document.getElementById("report-status");
 
-    <section>
-      <h2>5. Reporting</h2>
-      <p>Generate reports based on performance.</p>
-      <a href="reporting.html"><button>Go to Reporting</button></a>
-    </section>
+            // Simulated report access (for demo purposes)
+            if (report === "sales" || report === "inventory") {
+                reportOutput.innerHTML = `
+                            <h3>${report.charAt(0).toUpperCase() + report.slice(1)} Report</h3>
+                            <p>Here is the report content for ${report}...</p>
+                            <ul>
+                                <li><strong>Data point 1:</strong> Sales increased by 15% in Q1.</li>
+                                <li><strong>Data point 2:</strong> Inventory turnover ratio improved by 20%.</li>
+                            </ul>`;
+                reportStatus.innerHTML = "Report accessed successfully.";
+                reportStatus.style.color = "#4CAF50"; // Green for success
+            } else {
+                reportOutput.innerHTML = "";
+                reportStatus.innerHTML = "Access denied. You don't have permission to view this report.";
+                reportStatus.style.color = "#F44336"; // Red for denied access
+            }
+        }
 
-    <section>
-      <h2>6. Utility Functions</h2>
-      <p>Helper tools for deadline setting and tracking.</p>
-      <a href="utility.html"><button>Go to Utilities</button></a>
-    </section>
-  </main>
+        // Event listeners
+        document.getElementById("report-selection").addEventListener("submit", function (event) {
+            viewReport(event);
+        });
+    </script>
 
-  <footer>
-    <p>© 2024 Project Management System</p>
-  </footer>
 
-  <script src="script.js"></script>
 </body>
+
 </html>
