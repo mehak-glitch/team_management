@@ -2,21 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user-management.css">
 </head>
 <body>
-    <header>User Management</header>
+    <header>
+        <h1>User Management</h1>
+        <button id="logout">Logout</button>
+    </header>
     <main>
-        <section>
-            <h2>Manage Users</h2>
-            <ul>
-                <li>Admin: Manage users and view reports</li>
-                <li>Viewer: View reports only</li>
-                <li>Editor: Modify tasks and reports</li>
-            </ul>
+        <!-- Main Menu Section -->
+        <section id="main-menu">
+            <h2>Main Menu</h2>
+            <p id="user-role">You are logged in as: Admin</p>
+            <div id="menu-options"></div>
+        </section>
+
+        <!-- Admin Menu Section -->
+        <section id="user-management">
+            <h2>User Management</h2>
+            <!-- User Management functionality -->
+            <div id="user-management-functions" style="display:none;">
+                <!-- Manage Users and View Reports buttons -->
+                <button id="manage-users">Manage Users</button>
+                <button id="view-reports">View Reports</button>
+
+                <h3>Manage Users</h3>
+                <button id="add-user">Add New User</button>
+                <div id="user-list"></div>
+            </div>
         </section>
     </main>
-    <footer>© 2024 Project Management System. All rights reserved.</footer>
+
+    <footer>
+        <p>&copy; 2024 User Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="user-management.js"></script>
 </body>
 </html>
