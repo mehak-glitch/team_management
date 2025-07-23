@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verification</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verification.css">
 </head>
 <body>
-    <header>Verification System</header>
+    <header>
+        <h1>Verification</h1>
+    </header>
+
     <main>
-        <section>
+        <section id="verification-section">
             <h2>Welcome!</h2>
-            <p>You are logged in as: <strong>Admin</strong></p>
-            <a href="index.html"><button>Continue</button></a>
+            <p id="role-message">You are logged in as: <strong>Admin</strong></p>
+            <button id="continue-button">Continue</button>
         </section>
     </main>
-    <footer>© 2024 Project Management System. All rights reserved.</footer>
+
+    <footer>
+        <p>&copy; 2024 User Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="verification.js"></script>
 </body>
 </html>
