@@ -1,81 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporting System</title>
-    <link rel="stylesheet" href="reporting.css"> <!-- Link to the provided CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Container for the website -->
-    <div class="container">
-
-        <!-- Header -->
-        <header>
-            <h1>Reporting System</h1>
-        </header>
-
-        <!-- Report Selection Form -->
-        <div id="report-form" class="form-container">
-            <h2>Select a Report</h2>
-            <form id="report-selection" action="#" method="POST">
+    <header>Reporting System</header>
+    <main>
+        <section>
+            <h2>Select Report</h2>
+            <form id="report-selection">
                 <label for="report">Choose Report:</label>
                 <select id="report" name="report">
                     <option value="sales">Sales Report</option>
                     <option value="inventory">Inventory Report</option>
                     <option value="employee">Employee Report</option>
                 </select>
-
+                <br><br>
                 <button type="submit">View Report</button>
             </form>
             <p id="report-status"></p>
             <div id="report-output" class="report-output"></div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2024 Reporting System</p>
-        </footer>
-
-    </div>
-
-    <!-- JavaScript to manage forms and user actions -->
-    <script>
-        // Simulate report viewing based on user access
-        function viewReport(event) {
-            event.preventDefault(); // Prevent form submission
-
-            var report = document.getElementById("report").value;
-            var reportOutput = document.getElementById("report-output");
-            var reportStatus = document.getElementById("report-status");
-
-            // Simulated report access (for demo purposes)
-            if (report === "sales" || report === "inventory") {
-                reportOutput.innerHTML = `
-                    <h3>${report.charAt(0).toUpperCase() + report.slice(1)} Report</h3>
-                    <p>Here is the report content for ${report}...</p>
-                    <ul>
-                        <li><strong>Data point 1:</strong> Sales increased by 15% in Q1.</li>
-                        <li><strong>Data point 2:</strong> Inventory turnover ratio improved by 20%.</li>
-                    </ul>`;
-                reportStatus.innerHTML = "Report accessed successfully.";
-                reportStatus.style.color = "#4CAF50"; // Green for success
-            } else {
-                reportOutput.innerHTML = "";
-                reportStatus.innerHTML = "Access denied. You don't have permission to view this report.";
-                reportStatus.style.color = "#F44336"; // Red for denied access
-            }
-        }
-
-        // Event listeners
-        document.getElementById("report-selection").addEventListener("submit", function (event) {
-            viewReport(event);
-        });
-    </script>
-
+        </section>
+    </main>
+    <footer>© 2024 Project Management System. All rights reserved.</footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
