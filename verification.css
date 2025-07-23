@@ -1,0 +1,60 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige background */
+    color: #5c4033; /* Dark brown text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #0078d4;
+    color: white;
+    padding: 1rem;
+}
+
+footer {
+    font-size: 14px;
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+/* Verification Section Styling */
+#verification-section {
+    background-color: #fff8e1; /* Light beige */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#verification-section h2 {
+    color: #0078d4;
+}
+
+#role-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0078d4;
+}
+
+button {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056a3;
+}
