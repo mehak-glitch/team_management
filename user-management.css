@@ -1,0 +1,96 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Beige background */
+    color: #5c4033; /* Dark brown text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer {
+    font-size: 14px;
+}
+
+/* Main Section */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* User Management Section */
+#user-management {
+    margin-top: 20px;
+}
+
+/* User List Styling */
+#user-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.user-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0078d4;
+}
+
+.user-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-item button:hover {
+    background-color: #d32f2f;
+}
+
+/* User Role Section */
+#user-role {
+    font-size: 18px;
+    color: #0078d4;
+}
+
+/* Manage Users and View Reports Buttons (reverted to original styling) */
+button {
+    background-color: #0078d4;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056a3;
+}
